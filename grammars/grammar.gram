@@ -1,0 +1,19 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar 
+ */
+
+grammar grammar;
+
+public <program> = ( computer );
+public <action> = ( new appointment | show appointment | delete appointment | close | test );
+public <connection> = ( at | on );
+public <days> = ( everyone | today | tomorrow );
+public <place> = ( church | office | home | school | college | club );
+public <month> = ( january | february | march | april | may | june | july | august | september
+                    | october | november | december );
+public <number> = ( zero | one | two | three | four | five | six | seven | eight | nine | ten
+                   | eleven | twelve | thirteen | fourteen | fifteen | sixteen | seventeen | eighteen
+                   | nineteen | twenty | thirty | forty | fifty | o'clock )+;
+public <syntax> = <place>{1} <connection>{1} <month>{1} <number> <connection>{1} <number>;
